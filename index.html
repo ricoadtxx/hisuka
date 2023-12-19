@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>HISUKA</title>
+    </head>
+
+    <body>
+        <!-- Navbar Start -->
+        <header class="navbar-header">
+            <nav class="navbar">
+                <div class="navbar-title">
+                    <a href="#home">
+                        <h1>HISUKA</h1>
+                    </a>
+                </div>
+                <div class="navbar-content">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#kalkulator">Kalkulator KKH</a></li>
+                        <li><a href="#kkh">Hitungan KKH</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-button">
+                    <button title="menu" class="filter">
+                        <svg viewBox="0 0 512 512" height="1em">
+                            <path
+                                d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="button-calc">
+                    <button class="cssbuttons-io-button">
+                        Get started
+                        <div class="icon">
+                            <a href="#kalkulator">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!-- Navbar End -->
+        <main>
+            <!-- Homepage Start -->
+            <section class="home-section" id="home">
+                <div class="home-content">
+                    <h1>WELCOME TO HISUKA</h1>
+                    <h5><b>HI</b>tungan <b>SU</b>dut <b>KA</b>kh</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, vero!</p>
+                </div>
+                <button class="btn-explore"> <a href="#about">About</a></button>
+            </section>
+            <!-- Homepage End -->
+            <!-- About Start -->
+            <section class="about-section" id="about">
+                <div class="about-img">
+                    <img src="img/hisoka.png" alt="">
+                </div>
+                <div class="about-text">
+                    <h1>ABOUT</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quidem? Labore mollitia minus
+                        necessitatibus at dignissimos! Nobis nesciunt modi molestiae.</p>
+                </div>
+            </section>
+            <!-- About End -->
+            <!-- Kalkulator Start -->
+            <section class="calculator-section" id="kalkulator">
+                <div class="calculator-title">
+                    <h1>Kalkulator KKH</h1>
+                </div>
+                <div class="calculator">
+                    <div class="sudut-seri1">
+                        <h1>Seri 1</h1>
+                        <div class="titik-1">
+                            <p>TITK 1</p>
+                            <label class="biasa" for="derajat-biasa-1">Sudut Biasa :
+                                <span><input type="number" id="derajat-biasa-1"></span>
+                                <span><input type="number" id="menit-biasa-1"></span>
+                                <span><input type="number" id="detik-biasa-1"></span>
+                            </label>
+                            <label class="luar-biasa" for="derajat-luar-1">Sudut Luar Biasa :
+                                <span><input type="number" id="derajat-luar-1"></span>
+                                <span><input type="number" id="menit-luar-1"></span>
+                                <span><input type="number" id="detik-luar-1"></span>
+                            </label>
+                        </div>
+                        <div class="titik-2">
+                            <p>TITIK 2</p>
+                            <label class="biasa" for="derajat-biasa-2">Sudut Biasa :
+                                <span><input type="number" id="derajat-biasa-2"></span>
+                                <span><input type="number" id="menit-biasa-2"></span>
+                                <span><input type="number" id="detik-biasa-2"></span>
+                            </label>
+                            <label class="luar-biasa" for="derajat-luar-2">Sudut Luar Biasa :
+                                <span><input type="number" id="derajat-luar-2"></span>
+                                <span><input type="number" id="menit-luar-2"></span>
+                                <span><input type="number" id="detik-luar-2"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sudut-seri2">
+                        <h1>Seri 2</h1>
+                        <div class="titik-1">
+                            <p>TITIK 1</p>
+                            <label class="biasa" for="derajat-biasa-3">Sudut Biasa :
+                                <span><input type="number" id="derajat-biasa-3"></span>
+                                <span><input type="number" id="menit-biasa-3"></span>
+                                <span><input type="number" id="detik-biasa-3"></span>
+                            </label>
+                            <label class="luar-biasa" for="derajat-luar-3">Sudut Luar Biasa :
+                                <span><input type="number" id="derajat-luar-3"></span>
+                                <span><input type="number" id="menit-luar-3"></span>
+                                <span><input type="number" id="detik-luar-3"></span>
+                            </label>
+                        </div>
+                        <div class="titik-2">
+                            <p>TITIK 2</p>
+                            <label class="biasa" for="derajat-biasa-4">Sudut Biasa :
+                                <span><input type="number" id="derajat-biasa-4"></span>
+                                <span><input type="number" id="menit-biasa-4"></span>
+                                <span><input type="number" id="detik-biasa-4"></span>
+                            </label>
+                            <label class="luar-biasa" for="derajat-luar-4">Sudut Luar Biasa :
+                                <span><input type="number" id="derajat-luar-4"></span>
+                                <span><input type="number" id="menit-luar-4"></span>
+                                <span><input type="number" id="detik-luar-4"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="result" id="all-result">
+                        <div id="result2"></div>
+                        <div id="result1"></div>
+                        <div id="rata-rata"></div>
+                        <div id="hasilPerbandingan"></div>
+                    </div>
+                    <button class="hitung" onclick="hitung()">Hitung</button>
+                    <br>
+                    <button class="hitung" onclick="showModal()">riwayat</button>
+                    <div class="riwayat-container">
+                        <div id="all-result-modal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <div id="modal-history"></div>
+                                <button class="hitung" onclick="clearHistory()">Hapus Riwayat</button>
+                                <button class="hitung" id="hitung-rata-rata" onclick="hitungSumRerataSudut()">Total
+                                    Rata-rata</button>
+                                <div id="loading-indicator" style="display: none;">
+                                    <div class="terminal-loader">
+                                        <div class="terminal-header">
+                                            <div class="terminal-title">Status</div>
+                                            <div class="terminal-controls">
+                                                <div class="control close"></div>
+                                                <div class="control minimize"></div>
+                                                <div class="control maximize"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text">Loading...</div>
+                                    </div>
+                                </div>
+                                <div id="sumResult"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Kalkulator End -->
+            <!-- KKH Start -->
+            <section class="kkh-section" id="kkh">
+                <div class="card-input">
+                    <div class="azimuth">
+                        <label class="azimuth-input" for="azimuth">Input azimuth :
+                            <span><input type="number" id="derajat-azimuth"></span>
+                            <span><input type="number" id="menit-azimuth"></span>
+                            <span><input type="number" id="detik-azimuth"></span>
+                        </label>
+                        <label class="koordinat-input" for="koordinat">
+                            Input koordinat:
+                            <span><input type="float" id="koordinatX"></span>
+                            <span><input name="koordinat" type="float" id="koordinatY"></span>
+                        </label>
+                    </div>
+                    <div class="jarak">
+                        <label for="fileInput">file CSV Jarak:</label><br>
+                        <input type="file" id="fileInput" accept=".csv" onchange="handleFile()">
+                    </div>
+                    <button class="hitung" onclick="calculateKKH()">Hitung KKH</button>
+                </div>
+                <div class="card-kkh">
+                    <div id="loading-indicator1" style="display: none;">
+                        <div class="terminal-loader">
+                            <div class="terminal-header">
+                                <div class="terminal-title">Status</div>
+                                <div class="terminal-controls">
+                                    <div class="control close"></div>
+                                    <div class="control minimize"></div>
+                                    <div class="control maximize"></div>
+                                </div>
+                            </div>
+                            <div class="text">Loading...</div>
+                        </div>
+                    </div>
+                    <table id="table">
+                        <thead id="table-head">
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                    <button class="hitung" id="downloadcsv" style="display: none;" onclick="exportToExcel()">Download
+                        Data</button>
+                </div>
+            </section>
+            <!-- KKH End -->
+        </main>
+        <script src="script.js"></script>
+        <script src="index.js"></script>
+    </body>
+
+</html>
